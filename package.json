@@ -1,0 +1,26 @@
+{
+    "name": "ta_postado",
+    "version": "1.0.0",
+    "description": "A blog API",
+    "keywords": [
+        "Blog"
+    ],
+    "homepage": "https://github.com/antonioamandio/TaPostado#readme",
+    "bugs": {
+        "url": "https://github.com/antonioamandio/TaPostado/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/antonioamandio/TaPostado.git"
+    },
+    "license": "ISC",
+    "author": "António Amândio",
+    "type": "module",
+    "main": "server.js",
+    "scripts": {
+        "dev": "node --watch src/server.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1"
+    }
+}
