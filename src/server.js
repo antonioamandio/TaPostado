@@ -1,6 +1,6 @@
 import express from 'express'
 
-const PORT = process.env.PORT || 8888
+const PORT = process.env.PORT || 3333
 const app = express()
 
 app.get('/health', (req, res) => {

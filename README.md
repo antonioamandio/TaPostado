@@ -23,7 +23,7 @@ O desenvolvimento do projeto tem como objetivo explorar e consolidar conheciment
 - Express.js
 - JavaScript (ES Modules)
 - PostgreSQL
-- Sequelize ORM
+- Prisma ORM
 
 ### Segurança
 
