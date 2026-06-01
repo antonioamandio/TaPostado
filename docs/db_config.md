@@ -1,29 +1,35 @@
-# Instale o postgres (No linux)
+# Guia para instalar e rodar o postgres
 
-sudo apt install postgresql-x
+## Instale o postgres (No linux)
 
-x => Versão do postgres. Ex: 18
+```sql
+sudo apt install postgresql
+```
 
-# Acessar postgres com user padrão (Apenas para lembrar o comando)
+OBS: Ou baixe de repositórios com versões mais atualizadas...
 
+## Acessar postgres com user padrão
+
+```sql
 sudo -u postgres psql
+```
 
-# Crie seu user próprio para a API (recomendado)
+## Crie seu user próprio para a API (recomendado)
 
-Não uses postgres em produção.
+Não uses o usuário **postgres** em produção.
 
 ```sql
 CREATE USER blog_user WITH PASSWORD 'blog_pass';
 ```
 
-# crie a base de dados do app
-
-```sql
-CREATE DATABASE blog_db;
-```
-
-# Dê permissão ao user para criar bases de dados
+## Dê permissão ao user para criar bases de dados
 
 ```sql
 ALTER USER blog_user CREATEDB;
+```
+
+## crie a base de dados do app
+
+```sql
+CREATE DATABASE blog_db;
 ```
