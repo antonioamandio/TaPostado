@@ -78,6 +78,24 @@ src/
 
 ## ⚙️ Instalação
 
+### 📋 Pré-requisitos
+
+Antes de executar o projeto, certifique-se de ter instalado:
+
+- [Node.js 24 LTS ou superior](https://nodejs.org/)
+- [PostgreSQL 17 ou superior](https://www.postgresql.org/)
+- [Git](https://git-scm.com/)
+- [npm (instalado juntamente com o Node.js)](https://www.npmjs.com/)
+
+Verificando as instalações:
+
+```shell
+node --version
+npm --version
+psql --version
+git --version
+```
+
 ### Clonar o repositório
 
 ```shell
@@ -102,11 +120,12 @@ URL=http://localhost
 
 DB_HOST=localhost
 DB_PORT=5432
-DB_NAME=ta_postado
-DB_USER=postgres
-DB_PASSWORD=sua_senha
+DB_NAME=blog_db
+DB_USER=blog_user
+DB_PASSWORD=blog_pass
 
-JWT_SECRET=sua_chave_secreta
+JWT_SECRET=your_secret_key
+
 ```
 
 ### Iniciar o servidor
