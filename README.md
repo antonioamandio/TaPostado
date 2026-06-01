@@ -1,0 +1,158 @@
+# 🚀 Tá Postado (Blog API)
+
+Uma API REST profissional para gerenciamento de posts e comentários, desenvolvida com Node.js, Express e PostgreSQL.
+
+## 📖 Sobre o Projeto
+
+Um projeto de estudo e prática focado no desenvolvimento de uma API REST moderna, aplicando conceitos fundamentais de backend e boas práticas utilizadas em aplicações reais.
+
+O desenvolvimento do projeto tem como objetivo explorar e consolidar conhecimentos em:
+
+- Arquitetura em camadas
+- Autenticação JWT
+- Segurança de aplicações web
+- Modelagem relacional com PostgreSQL
+- ORM com Sequelize
+- Boas práticas de desenvolvimento profissional
+
+## 🛠️ Stack Tecnológica
+
+### Backend
+
+- Node.js
+- Express.js
+- JavaScript (ES Modules)
+- PostgreSQL
+- Sequelize ORM
+
+### Segurança
+
+- JWT (JSON Web Token)
+- Bcrypt
+
+## 📂 Estrutura do Projeto
+
+```text
+src/
+├── config/
+├── controllers/
+├── database/
+│   ├── migrations/
+│   └── ...
+├── middlewares/
+├── models/
+├── repositories/
+├── routes/
+├── services/
+├── utils/
+└── validations/
+```
+
+## 🗄️ Modelagem do Banco de Dados
+
+### Users
+
+| Campo    | Tipo   |
+| -------- | ------ |
+| id       | UUID   |
+| email    | String |
+| password | String |
+
+### Posts
+
+| Campo   | Tipo   |
+| ------- | ------ |
+| id      | UUID   |
+| title   | String |
+| content | Text   |
+| user_id | UUID   |
+
+### Comments
+
+| Campo   | Tipo |
+| ------- | ---- |
+| id      | UUID |
+| content | Text |
+| post_id | UUID |
+| user_id | UUID |
+
+## ⚙️ Instalação
+
+### Clonar o repositório
+
+```shell
+git clone https://github.com/antonioamandio/TaPostado.git ta-postado-api
+
+cd ta-postado-api
+```
+
+### Instalar dependências
+
+```shell
+npm install
+```
+
+### Configurar variáveis de ambiente
+
+Crie um arquivo `.env`:
+
+```env
+PORT=3333
+URL=http://localhost
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=ta_postado
+DB_USER=postgres
+DB_PASSWORD=sua_senha
+
+JWT_SECRET=sua_chave_secreta
+```
+
+### Iniciar o servidor
+
+```bash
+npm run dev
+```
+
+## 📈 Roadmap
+
+### Fase 1
+
+- Configuração inicial
+- PostgreSQL
+- Sequelize
+- Migrations
+
+### Fase 2
+
+- Sistema de autenticação
+- JWT
+- Bcrypt
+
+### Fase 3
+
+- CRUD de Posts
+- CRUD de Comentários
+- Controle de permissões
+
+### Fase 4
+
+- Testes automatizados
+- Validações
+- Tratamento global de erros
+
+## 🔮 Melhorias Futuras
+
+- Upload de imagens
+- Integração com Cloudinary
+- Full Text Search
+- Cache com Redis
+- Migração para TypeScript
+- Paginação avançada
+- Sistema de likes
+- Categorias e tags
+
+## 📄 Licença
+
+Este projeto foi desenvolvido para fins educacionais e de estudo de engenharia backend moderna.
