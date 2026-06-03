@@ -2,7 +2,7 @@
 
 ## Instale o postgres (No linux)
 
-```sql
+```shell
 sudo apt install postgresql
 ```
 
@@ -10,7 +10,7 @@ OBS: Ou baixe de repositórios com versões mais atualizadas...
 
 ## Acessar postgres com user padrão
 
-```sql
+```shell
 sudo -u postgres psql
 ```
 
@@ -25,7 +25,7 @@ CREATE USER usuario WITH PASSWORD 'senha';
 ## Dê permissão ao user para criar bases de dados
 
 ```sql
-ALTER USER blog_user CREATEDB;
+ALTER USER usuario CREATEDB;
 ```
 
 ## Crie a base de dados
