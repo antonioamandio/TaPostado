@@ -19,7 +19,7 @@ sudo -u postgres psql
 Não uses o usuário **postgres** em produção.
 
 ```sql
-CREATE USER blog_user WITH PASSWORD 'blog_pass';
+CREATE USER usuario WITH PASSWORD 'senha';
 ```
 
 ## Dê permissão ao user para criar bases de dados
@@ -28,8 +28,8 @@ CREATE USER blog_user WITH PASSWORD 'blog_pass';
 ALTER USER blog_user CREATEDB;
 ```
 
-## crie a base de dados do app
+## Crie a base de dados
 
 ```sql
-CREATE DATABASE blog_db;
+CREATE DATABASE nome_do_banco_de_dados OWNER usuario;
 ```
