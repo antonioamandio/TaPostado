@@ -9,7 +9,7 @@ npm install prisma --save-dev
 ## Instale o driver do banco de dados para o prisma
 
 ```shell
-prisma init --datasource-provider postgresql
+npx prisma init --datasource-provider postgresql
 ```
 
 ## Configure o arquivo .env
