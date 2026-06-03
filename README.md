@@ -1,4 +1,4 @@
-# 🚀 Tá Postado (Blog API)
+# 📝 Tá Postado (Blog API)
 
 Uma API REST profissional para gerenciamento de posts e comentários, desenvolvida com Node.js, Express e PostgreSQL.
 
@@ -30,24 +30,6 @@ O desenvolvimento do projeto tem como objetivo explorar e consolidar conheciment
 - JWT (JSON Web Token)
 - Bcrypt
 
-## 📂 Estrutura do Projeto
-
-```text
-src/
-├── config/
-├── controllers/
-├── database/
-│   ├── migrations/
-│   └── ...
-├── middlewares/
-├── models/
-├── repositories/
-├── routes/
-├── services/
-├── utils/
-└── validations/
-```
-
 ## 🗄️ Modelagem do Banco de Dados
 
 ### Users
@@ -55,6 +37,7 @@ src/
 | Campo    | Tipo   |
 | -------- | ------ |
 | id       | UUID   |
+| name     | String |
 | email    | String |
 | password | String |
 
@@ -133,7 +116,7 @@ npm run dev
 
 - Configuração inicial
 - PostgreSQL
-- Sequelize
+- Prisma ORM
 - Migrations
 
 ### Fase 2
@@ -167,4 +150,4 @@ npm run dev
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido para fins educacionais e de estudo de engenharia backend moderna.
+Este projeto foi desenvolvido para fins educacionais e de estudo de backend moderno.
