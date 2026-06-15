@@ -1,6 +1,6 @@
 # Guia para instalar e rodar o postgres
 
-## Instale o postgres (No linux)
+## Instale o Postgres (No linux)
 
 ```shell
 sudo apt install postgresql
@@ -8,7 +8,7 @@ sudo apt install postgresql
 
 OBS: Ou baixe de repositórios com versões mais atualizadas...
 
-## Acessar postgres com user padrão
+## Acesse o Postgres com user padrão
 
 ```shell
 sudo -u postgres psql
