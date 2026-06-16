@@ -15,7 +15,7 @@ npx prisma init --datasource-provider postgresql
 ## Configure o arquivo .env
 
 ```.env
-DATABASE_URL=postgres://user:pass@host:5432/db
+DATABASE_URL=postgres://user:password@host:5432/db
 ```
 
 ## Instale o cliente do Prisma (Com o driver do Postgres)
