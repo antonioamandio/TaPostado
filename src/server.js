@@ -20,6 +20,13 @@ app.get('/users', async (req, res) => {
     return res.json(users)
 })
 
+// Temporary endpoint to test DB connection
+app.get('/posts', async (req, res) => {
+    const posts = await prisma.post.findMany()
+
+    return res.json(posts)
+})
+
 app.listen(PORT, () => {
     console.log(
         `Server running on: ${process.env.URL || 'http://localhost'}:${PORT}`,
