@@ -6,7 +6,10 @@
 sudo apt install postgresql
 ```
 
-OBS: Ou baixe de repositórios com versões mais atualizadas...
+Nota:
+
+- Se você não usa linux, pesquise em https://www.postgresql.org/ como instalar no seu Sistema operacional
+- Caso prefira e existam, pode usar uma versão LTS mais recentes do Postgres
 
 ## Acesse o Postgres com user padrão
 
