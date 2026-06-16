@@ -12,7 +12,7 @@ O desenvolvimento do projeto tem como objetivo explorar e consolidar conheciment
 - Autenticação JWT
 - Segurança de aplicações web
 - Modelagem relacional com PostgreSQL
-- ORM com Sequelize
+- ORM com Prisma
 - Boas práticas de desenvolvimento profissional
 
 ## 🛠️ Stack Tecnológica
@@ -43,21 +43,21 @@ O desenvolvimento do projeto tem como objetivo explorar e consolidar conheciment
 
 ### Posts
 
-| Campo   | Tipo   |
-| ------- | ------ |
-| id      | UUID   |
-| title   | String |
-| content | Text   |
-| user_id | UUID   |
+| Campo     | Tipo   |
+| --------- | ------ |
+| id        | UUID   |
+| title     | String |
+| content   | Text   |
+| author_id | UUID   |
 
 ### Comments
 
-| Campo   | Tipo |
-| ------- | ---- |
-| id      | UUID |
-| content | Text |
-| post_id | UUID |
-| user_id | UUID |
+| Campo     | Tipo |
+| --------- | ---- |
+| id        | UUID |
+| content   | Text |
+| post_id   | UUID |
+| author_id | UUID |
 
 ## ⚙️ Instalação
 
@@ -100,7 +100,7 @@ Crie um arquivo `.env`:
 ```env
 PORT=3333
 URL=http://localhost
-DATABASE_URL=postgres://user:pass@host:5432/db
+DATABASE_URL=postgres://user:password@host:5432/db
 JWT_SECRET=your_secret_key
 ```
 
