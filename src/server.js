@@ -13,18 +13,25 @@ app.get('/health', (req, res) => {
     }
 })
 
-// Temporary endpoint to test DB connection
+// Temporary endpoint for testing
 app.get('/users', async (req, res) => {
     const users = await prisma.user.findMany()
 
     return res.json(users)
 })
 
-// Temporary endpoint to test DB connection
+// Temporary endpoint for testing
 app.get('/posts', async (req, res) => {
     const posts = await prisma.post.findMany()
 
     return res.json(posts)
+})
+
+// Temporary endpoint for testing
+app.get('/comments', async (req, res) => {
+    const comments = await prisma.comment.findMany()
+
+    return res.json(comments)
 })
 
 app.listen(PORT, () => {
