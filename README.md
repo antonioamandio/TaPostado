@@ -100,7 +100,7 @@ Crie um arquivo `.env`:
 ```env
 PORT=3333
 URL=http://localhost
-DATABASE_URL=postgres://user:password@host:5432/db
+DATABASE_URL=postgres://[user]:[password]@[host]:5432/[database]
 JWT_SECRET=your_secret_key
 ```
 
