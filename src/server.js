@@ -1,8 +1,10 @@
 import express from 'express'
-import { prisma } from './config/database.js'
+import { userRepository } from './container.js'
 
 const PORT = process.env.PORT || 3333
 const app = express()
+
+app.user(express.json())
 
 // Endpoint to test API connection
 app.get('/health', (req, res) => {
@@ -13,25 +15,24 @@ app.get('/health', (req, res) => {
     }
 })
 
-// Temporary endpoint for testing
+/*
+// Temporary endpoint for testing - GET /users
 app.get('/users', async (req, res) => {
     const users = await prisma.user.findMany()
 
     return res.json(users)
 })
+*/
 
-// Temporary endpoint for testing
-app.get('/posts', async (req, res) => {
-    const posts = await prisma.post.findMany()
+// Temporary endpoint for testing - POST /users
+app.post('/users', async (req, res) => {
+    const user = await userRepository.create({
+        name: 'Antonio Amandio',
+        email: 'email de testeeeeeeeee',
+        password: 'Os repositories estao a funcionar',
+    })
 
-    return res.json(posts)
-})
-
-// Temporary endpoint for testing
-app.get('/comments', async (req, res) => {
-    const comments = await prisma.comment.findMany()
-
-    return res.json(comments)
+    return res.status(201).json(user)
 })
 
 app.listen(PORT, () => {
