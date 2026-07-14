@@ -1,14 +1,16 @@
 class UserRepository {
+    #prisma
+
     constructor(prisma) {
-        this.prisma = prisma
+        this.#prisma = prisma
     }
 
     async create(data) {
-        return this.prisma.user.create({ data })
+        return this.#prisma.user.create({ data })
     }
 
     async findAll() {
-        return this.prisma.user.findMany()
+        return this.#prisma.user.findMany()
     }
 }
 
