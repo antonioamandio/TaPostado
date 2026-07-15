@@ -36,7 +36,7 @@ model Post {
   updatedAt DateTime @updatedAt @map("updated_at")
 
   authorId String @map("author_id")
-  author   User   @relation(fields: [authorId], references: [id])
+  author   User   @relation(fields: [authorId], references: [id], onDelete: Cascade)
 
   comments Comment[]
 
@@ -53,8 +53,8 @@ model Comment {
   authorId String @map("author_id")
   postId   String @map("post_id")
 
-  author User @relation(fields: [authorId], references: [id])
-  post   Post @relation(fields: [postId], references: [id])
+  author User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  post   Post @relation(fields: [postId], references: [id], onDelete: Cascade)
 
   @@map("comments")
 }
