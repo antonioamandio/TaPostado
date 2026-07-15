@@ -1,4 +1,4 @@
-class UserRepository {
+export class UserRepository {
     #prisma
 
     constructor(prisma) {
@@ -31,5 +31,3 @@ class UserRepository {
         })
     }
 }
-
-export { UserRepository }
