@@ -18,4 +18,11 @@ export class PostRepository {
             where: { id },
         })
     }
+
+    async update(id, data) {
+        return this.#prisma.post.update({
+            where: { id },
+            data: data,
+        })
+    }
 }
