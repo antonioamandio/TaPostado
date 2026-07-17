@@ -22,7 +22,7 @@ export class PostRepository {
     async update(id, data) {
         return this.#prisma.post.update({
             where: { id },
-            data: data,
+            data,
         })
     }
 
