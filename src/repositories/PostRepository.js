@@ -12,4 +12,10 @@ export class PostRepository {
     async findAll() {
         return this.#prisma.post.findMany()
     }
+
+    async findById(id) {
+        return this.#prisma.post.findUnique({
+            where: { id },
+        })
+    }
 }
