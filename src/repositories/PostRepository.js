@@ -8,4 +8,8 @@ export class PostRepository {
     async create(data) {
         return this.#prisma.post.create({ data })
     }
+
+    async findAll() {
+        return this.#prisma.post.findMany()
+    }
 }
