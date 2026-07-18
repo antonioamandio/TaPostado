@@ -12,4 +12,10 @@ export class CommentRepository {
     async findAll() {
         return this.#prisma.comment.findMany()
     }
+
+    async findById(id) {
+        return this.#prisma.comment.findUnique({
+            where: { id },
+        })
+    }
 }
