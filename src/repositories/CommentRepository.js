@@ -8,4 +8,8 @@ export class CommentRepository {
     async create(data) {
         return this.#prisma.comment.create({ data })
     }
+
+    async findAll() {
+        return this.#prisma.comment.findMany()
+    }
 }
