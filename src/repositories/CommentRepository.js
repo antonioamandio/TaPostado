@@ -18,4 +18,11 @@ export class CommentRepository {
             where: { id },
         })
     }
+
+    async update(id, data) {
+        return this.#prisma.comment.update({
+            where: { id },
+            data,
+        })
+    }
 }
