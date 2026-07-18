@@ -25,4 +25,10 @@ export class CommentRepository {
             data,
         })
     }
+
+    async delete(id) {
+        return this.#prisma.comment.delete({
+            where: { id },
+        })
+    }
 }
