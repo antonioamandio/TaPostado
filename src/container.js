@@ -11,6 +11,11 @@ import { UserService } from './services/UserService.js'
 import { PostService } from './services/PostService.js'
 import { CommentService } from './services/CommentService.js'
 
+// Controllers
+import { UserController } from './controllers/UserController.js'
+import { PostController } from './controllers/PostController.js'
+import { CommentController } from './controllers/CommentController.js'
+
 // Instances
 const userRepository = new UserRepository(prisma)
 const postRepository = new PostRepository(prisma)
@@ -20,5 +25,9 @@ const userService = new UserService(userRepository)
 const postService = new PostService(postRepository)
 const commentService = new CommentService(commentRepository)
 
+const userController = new UserController(userService)
+const postController = new PostController(postService)
+const commentController = new CommentController(commentService)
+
 // Export
-//export { userService, postService, commentService }
+export { userController, postController, commentController }
